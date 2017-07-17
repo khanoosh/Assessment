@@ -1,8 +1,11 @@
 from __future__ import print_function
-for i in range(0,5):
-	j=0
-	while (j<=i):
-		c=chr(65+i+j)
-		print(c,end='')
-		j=j+1
-	print('')
+
+n=input("Input number of lines\n")
+A = 65
+for i in range(0, n):
+	for j in range(0, i+1):
+		ch = chr(A) 
+            	print(ch, end=" ")
+   		A=A+1
+        print("")
+ 

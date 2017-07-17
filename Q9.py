@@ -1,24 +1,29 @@
-#import re module to use regular expression functions
 import re
-password= raw_input("Input your password")
-check = True
-while check:  
-   	if (len(password)<6 or len(password)>12):
-        	break
-    	elif not re.search("[a-z]",password):
-        	break
-    	elif not re.search("[0-9]",password):
-        	break
-    	elif not re.search("[A-Z]",password):
-        	break
-    	elif not re.search("[$#@]",password):
-    	    break
-    	elif re.search("\s",password):
-    	    break
-    	else:
-    	    print("Valid Password")
-    	    check=False
-    	    break
+# to use regular expression functions
+def main():
+	s= raw_input("Input your password")
+	validate(s)
 
-if check:
-    print("Not a Valid Password")
+def validate(s):
+	check = True
+	while check:  
+   		if (len(s)<6 or len(s)>12):
+        		break
+    		elif not re.search("[a-z]",s):
+        		break
+    		elif not re.search("[0-9]",s):
+        		break
+    		elif not re.search("[A-Z]",s):
+        		break
+    		elif not re.search("[$#@]",s):
+    	    		break
+    		elif re.search("\s",s):
+    	 	   	break
+    		else:
+    	    		print("valid")
+    	    		check=False
+    	    		break
+	if check:
+		print("not valid")
+
+main()
